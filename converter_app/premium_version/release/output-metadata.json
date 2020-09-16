@@ -1,0 +1,20 @@
+{
+  "version": 1,
+  "artifactType": {
+    "type": "APK",
+    "kind": "Directory"
+  },
+  "applicationId": "by.bsuir.converter",
+  "variantName": "premium_versionRelease",
+  "elements": [
+    {
+      "type": "SINGLE",
+      "filters": [],
+      "properties": [],
+      "versionCode": 1,
+      "versionName": "1.0",
+      "enabled": true,
+      "outputFile": "converter_app-premium_version-release.apk"
+    }
+  ]
+}

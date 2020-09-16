@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="brand1">#69C765</color>
+    <color name="brand2">#454372</color>
+    <color name="background">#FFFFFF</color>
+
+    <color name="support">#FFC107</color>
+    <color name="danger">#FF5A5F</color>
+    <color name="success">#60E65C</color>
+    <color name="neutral">#99B898</color>
+
+    <color name="accentText">#3F4047</color>
+    <color name="primaryText">#48465B</color>
+    <color name="secondaryText">#74788D</color>
+
+    <color name="background_transparent">#33FFFFFF</color>
+    <color name="brand1_transparent">#3369C765</color>
+
+</resources>

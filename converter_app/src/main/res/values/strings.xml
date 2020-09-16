@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Converter</string>
+    <string name="choose_category">Choose category</string>
+
+    <string name="weight">Weight</string>
+    <string name="length">Length</string>
+    <string name="speed">Speed</string>
+    <string name="area">Area</string>
+    <string name="volume">Volume</string>
+    <string name="temperature">Temperature</string>
+    <string name="density">Density</string>
+    <string name="sound">Sound</string>
+    <string name="time">Time</string>
+
+    <string name="developer_info">Nikita Andrasovich, BSUIR</string>
+
+    <string name="original_copied">Original value copied</string>
+    <string name="converted_copied">Converted value copied</string>
+</resources>

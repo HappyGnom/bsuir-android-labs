@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background"
+        android:columnCount="3"
+        android:paddingBottom="16dp"
+        android:useDefaultMargins="true"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/button_1"
+            style="@style/NumpadButton"
+            android:text="1"
+            tools:ignore="HardcodedText" />
+
+        <Button
+            android:id="@+id/button_2"
+            style="@style/NumpadButton"
+            android:text="2"
+            tools:ignore="HardcodedText" />
+
+        <Button
+            android:id="@+id/button_3"
+            style="@style/NumpadButton"
+            android:text="3"
+            tools:ignore="HardcodedText" />
+
+        <Button
+            android:id="@+id/button_4"
+            style="@style/NumpadButton"
+            android:text="4"
+            tools:ignore="HardcodedText" />
+
+        <Button
+            android:id="@+id/button_5"
+            style="@style/NumpadButton"
+            android:text="5"
+            tools:ignore="HardcodedText" />
+
+        <Button
+            android:id="@+id/button_6"
+            style="@style/NumpadButton"
+            android:text="6"
+            tools:ignore="HardcodedText" />
+
+        <Button
+            android:id="@+id/button_7"
+            style="@style/NumpadButton"
+            android:text="7"
+            tools:ignore="HardcodedText" />
+
+        <Button
+            android:id="@+id/button_8"
+            style="@style/NumpadButton"
+            android:text="8"
+            tools:ignore="HardcodedText" />
+
+        <Button
+            android:id="@+id/button_9"
+            style="@style/NumpadButton"
+            android:text="9"
+            tools:ignore="HardcodedText" />
+
+        <Button
+            android:id="@+id/button_point"
+            style="@style/NumpadButton"
+            android:text="."
+            tools:ignore="HardcodedText" />
+
+        <Button
+            android:id="@+id/button_0"
+            style="@style/NumpadButton"
+            android:text="0"
+            tools:ignore="HardcodedText" />
+
+        <ImageButton
+            android:id="@+id/button_backspace"
+            style="@style/NumpadButton"
+            android:src="@drawable/ic_backspace"
+            android:tint="@color/brand2"
+            tools:ignore="ContentDescription" />
+
+    </GridLayout>
+
+</merge>

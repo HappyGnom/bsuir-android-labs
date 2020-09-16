@@ -1,0 +1,4 @@
+include ':ui'
+include ':architecture'
+include ':converter_app'
+rootProject.name = "Converter"

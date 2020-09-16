@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="weight_units">
+        <item>kg</item>
+        <item>ton</item>
+        <item>g</item>
+        <item>mg</item>
+        <item>lb</item>
+    </string-array>
+
+    <string-array name="length_units">
+        <item>m</item>
+        <item>dm</item>
+        <item>cm</item>
+        <item>km</item>
+        <item>in</item>
+        <item>ft</item>
+    </string-array>
+
+    <string-array name="speed_units">
+        <item>m/s</item>
+        <item>km/h</item>
+        <item>mile/h</item>
+        <item>ft/s</item>
+    </string-array>
+
+    <string-array name="area_units">
+        <item>m\u00B2</item>
+        <item>cm\u00B2</item>
+        <item>km\u00B2</item>
+        <item>in\u00B2</item>
+        <item>ft\u00B2</item>
+    </string-array>
+
+    <string-array name="volume_units">
+        <item>m\u00B3</item>
+        <item>cm\u00B3</item>
+        <item>km\u00B3</item>
+        <item>l</item>
+        <item>ml</item>
+    </string-array>
+
+    <string-array name="temperature_units">
+        <item>\u2103</item>
+        <item>\u2109</item>
+        <item>K</item>
+    </string-array>
+
+    <string-array name="density_units">
+        <item>g/m\u00B3</item>
+        <item>kg/m\u00B3</item>
+        <item>g/cm\u00B3</item>
+        <item>kg/cm\u00B3</item>
+        <item>g/l</item>
+        <item>kg/l</item>
+    </string-array>
+
+    <string-array name="sound_units">
+        <item>dB</item>
+        <item>B</item>
+        <item>Np</item>
+    </string-array>
+
+    <string-array name="time_units">
+        <item>s</item>
+        <item>ms</item>
+        <item>min</item>
+        <item>h</item>
+        <item>day(s)</item>
+    </string-array>
+
+</resources>

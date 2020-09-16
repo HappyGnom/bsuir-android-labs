@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical"
+    tools:context=".presentation.convertation.ConvertationFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/brand1_gradient_light"
+            app:layout_constraintBottom_toTopOf="@id/middle_guideLine"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/category_name_textView"
+            style="@style/TitleText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="64dp"
+            android:textColor="@color/background"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="@string/weight" />
+
+        <LinearLayout
+            android:id="@+id/original_value_layout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="42dp"
+            android:layout_marginEnd="32dp"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toTopOf="@id/middle_guideLine"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/category_name_textView">
+
+            <ImageButton
+                android:id="@+id/original_copy_button"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_gravity="center"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/transparent_button"
+                android:padding="4dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_copy"
+                android:tint="@color/background"
+                tools:ignore="ContentDescription" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:orientation="vertical">
+
+                <EditText
+                    android:id="@+id/original_value_editText"
+                    style="@style/TitleText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:focusable="false"
+                    android:hint="0.0"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:scrollHorizontally="true"
+                    android:textColor="@color/background"
+                    android:textColorHint="@color/background"
+                    android:textIsSelectable="false"
+                    tools:ignore="Autofill,HardcodedText,LabelFor"
+                    tools:text="100000" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="@color/background" />
+
+            </LinearLayout>
+
+            <Spinner
+                android:id="@+id/original_unit_spinner"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="8dp"
+                android:layout_weight="2"
+                android:background="@null"
+                android:popupBackground="@drawable/rounded_dropdown"
+                android:popupElevation="0.1dp"
+                android:spinnerMode="dropdown"
+                tools:entries="@array/weight_units"
+                tools:listitem="@layout/unit_spinner_item" />
+
+        </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/back_button"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="44dp"
+            android:background="@drawable/transparent_button"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_back"
+            android:tint="@color/background"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="ContentDescription" />
+
+        <ImageButton
+            android:id="@+id/swap_button"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:background="@drawable/rounded_button"
+            android:elevation="6dp"
+            android:padding="4dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_swap"
+            android:tint="@color/background"
+            app:layout_constraintBottom_toBottomOf="@id/middle_guideLine"
+            app:layout_constraintEnd_toEndOf="@id/swap_guideLine"
+            app:layout_constraintStart_toStartOf="@id/swap_guideLine"
+            app:layout_constraintTop_toTopOf="@id/middle_guideLine"
+            tools:ignore="ContentDescription" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/middle_guideLine"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.5" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/swap_guideLine"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.8" />
+
+        <LinearLayout
+            android:id="@+id/converted_value_layout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="42dp"
+            android:layout_marginEnd="32dp"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/middle_guideLine">
+
+            <ImageButton
+                android:id="@+id/converted_copy_button"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_gravity="center"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/transparent_button"
+                android:padding="4dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_copy"
+                android:tint="@color/brand1"
+                tools:ignore="ContentDescription" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:orientation="vertical">
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scrollbars="none">
+
+                    <TextView
+                        android:id="@+id/converted_value_textView"
+                        style="@style/TitleText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:maxLines="1"
+                        android:textColor="@color/brand1"
+                        tools:text="1000" />
+
+                </HorizontalScrollView>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="@color/brand1" />
+
+            </LinearLayout>
+
+            <Spinner
+                android:id="@+id/converted_unit_spinner"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="8dp"
+                android:layout_weight="2"
+                android:background="@null"
+                android:popupBackground="@drawable/rounded_dropdown_colored"
+                android:popupElevation="0.1dp"
+                android:spinnerMode="dropdown"
+                tools:entries="@array/weight_units"
+                tools:listitem="@layout/unit_spinner_item_colored" />
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@color/brand2" />
+
+    <by.bsuir.converter.Numpad
+        android:id="@+id/numpad"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

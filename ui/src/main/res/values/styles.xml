@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="TextBase">
+        <item name="android:fontFamily">@font/noto_sans_jp_regular</item>
+        <item name="android:textColor">@color/primaryText</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
+
+    <style name="TitleText" parent="TextBase">
+        <item name="android:textColor">@color/accentText</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize" tools:ignore="SpUsage">28dp</item>
+    </style>
+
+    <style name="ContentText" parent="TextBase">
+        <item name="android:textColor">@color/primaryText</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="SpinnerItem">
+        <item name="android:fontFamily">@font/noto_sans_jp_regular</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:textSize">15sp</item>
+        <item name="drawableStartCompat">@drawable/ic_arrow_down</item>
+        <item name="android:drawablePadding">8dp</item>
+        <item name="android:ellipsize">marquee</item>
+        <item name="android:singleLine">true</item>
+    </style>
+
+    <style name="SpinnerDropDownItem">
+        <item name="android:fontFamily">@font/noto_sans_jp_regular</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:ellipsize">marquee</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:gravity">center</item>
+        <item name="android:paddingStart">24dp</item>
+        <item name="android:paddingEnd">8dp</item>
+    </style>
+
+    <style name="NumpadButton" parent="TextBase">
+        <item name="android:layout_rowWeight">1</item>
+        <item name="android:layout_columnWeight">1</item>
+        <item name="android:textColor">@color/brand2</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:background">@drawable/transparent_button</item>
+    </style>
+
+</resources>
