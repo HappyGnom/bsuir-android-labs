@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/timersListFragment">
+
+    <fragment
+        android:id="@+id/timersListFragment"
+        android:name="by.bsuir.tabata_app.presentation.timers_list.TimersListFragment"
+        android:label="timers_list_fragment"
+        tools:layout="@layout/timers_list_fragment">
+        <action
+            android:id="@+id/action_timersListFragment_to_timerFragment"
+            app:destination="@id/timerFragment" />
+        <action
+            android:id="@+id/action_timersListFragment_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/timerFragment"
+        android:name="by.bsuir.tabata_app.presentation.timer.TimerFragment"
+        android:label="timer_fragment"
+        tools:layout="@layout/timer_fragment">
+        <argument
+            android:name="timer"
+            app:argType="by.bsuir.tabata_app.data.entity.Timer"
+            app:nullable="true"
+            android:defaultValue="@null" />
+        <action
+            android:id="@+id/action_timerFragment_to_countdownFragment"
+            app:destination="@id/countdownFragment"
+            app:popUpTo="@id/timersListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/countdownFragment"
+        android:name="by.bsuir.tabata_app.presentation.countdown.CountdownFragment"
+        android:label="countdown_fragment"
+        tools:layout="@layout/countdown_fragment" >
+        <argument
+            android:name="timer"
+            app:argType="by.bsuir.tabata_app.data.entity.Timer" />
+        <action
+            android:id="@+id/action_countdownFragment_to_congratulationFragment"
+            app:destination="@id/congratulationFragment"
+            app:popUpTo="@id/timersListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/congratulationFragment"
+        android:name="by.bsuir.tabata_app.presentation.congratulation.CongratulationFragment"
+        android:label="congratulation_fragment"
+        tools:layout="@layout/congratulation_fragment" />
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="by.bsuir.tabata_app.presentation.settings.SettingsFragment"
+        android:label="SettingsFragment" />
+</navigation>

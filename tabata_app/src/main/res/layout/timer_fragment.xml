@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/theme_backgroundColor"
+    tools:context=".presentation.timer.TimerFragment">
+
+    <ImageButton
+        android:id="@+id/back_button"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="44dp"
+        android:background="@drawable/transparent_button"
+        android:scaleType="fitXY"
+        android:src="@drawable/ic_back"
+        android:tint="?attr/theme_secondaryColor"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription" />
+
+    <LinearLayout
+        android:id="@+id/header_layout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:layout_marginStart="16dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="@id/back_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/back_button"
+        app:layout_constraintTop_toTopOf="@id/back_button">
+
+        <EditText
+            android:id="@+id/timer_name_editText"
+            style="@style/ContentText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/rounded_edit_text"
+            android:backgroundTint="?attr/theme_primaryColor"
+            android:hint="@string/title"
+            android:inputType="text"
+            android:maxLength="25"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:textColor="?attr/theme_primaryTextColor"
+            android:textColorHint="?attr/theme_secondaryTextColor"
+            android:textSize="?attr/font_medium"
+            android:importantForAutofill="no" />
+
+        <ImageButton
+            android:id="@+id/color_button"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="16dp"
+            android:background="@drawable/round_button"
+            android:backgroundTint="?attr/theme_primaryColor"
+            android:padding="4dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_colorpicker"
+            android:tint="@color/background"
+            tools:ignore="ContentDescription" />
+
+        <ImageButton
+            android:id="@+id/confirm_button"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="16dp"
+            android:background="@drawable/transparent_button"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_confirm"
+            android:tint="?attr/theme_primaryColor"
+            tools:ignore="ContentDescription" />
+
+    </LinearLayout>
+
+    <GridLayout
+        android:id="@+id/params_gridLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:columnCount="2"
+        android:orientation="horizontal"
+        android:useDefaultMargins="true"
+        app:layout_constraintTop_toBottomOf="@id/header_layout">
+
+        <TextView
+            style="@style/ContentText"
+            android:layout_columnWeight="1"
+            android:text="@string/work"
+            android:textColor="?attr/theme_primaryTextColor"
+            android:textSize="?attr/font_medium" />
+
+        <by.bsuir.tabata_app.util.TimeInput
+            android:id="@+id/work_timeInput"
+            android:layout_columnWeight="1"
+            android:layout_gravity="end"
+            app:defaultValue="45" />
+
+        <TextView
+            style="@style/ContentText"
+            android:layout_columnWeight="1"
+            android:text="@string/rest"
+            android:textColor="?attr/theme_primaryTextColor"
+            android:textSize="?attr/font_medium" />
+
+        <by.bsuir.tabata_app.util.TimeInput
+            android:id="@+id/rest_timeInput"
+            android:layout_columnWeight="1"
+            android:layout_gravity="end"
+            app:defaultValue="20" />
+
+        <TextView
+            style="@style/ContentText"
+            android:layout_columnWeight="1"
+            android:text="@string/intervals"
+            android:textColor="?attr/theme_primaryTextColor"
+            android:textSize="?attr/font_medium" />
+
+        <by.bsuir.tabata_app.util.NumberInput
+            android:id="@+id/intervals_numberInput"
+            android:layout_columnWeight="1"
+            android:layout_gravity="end"
+            app:defaultValue="5"
+            app:maxValue="20" />
+
+        <TextView
+            style="@style/ContentText"
+            android:layout_columnWeight="1"
+            android:text="@string/cycles"
+            android:textColor="?attr/theme_primaryTextColor"
+            android:textSize="?attr/font_medium" />
+
+        <by.bsuir.tabata_app.util.NumberInput
+            android:id="@+id/cycles_numberInput"
+            android:layout_columnWeight="1"
+            android:layout_gravity="end"
+            app:defaultValue="3"
+            app:maxValue="20" />
+
+        <TextView
+            style="@style/ContentText"
+            android:layout_columnWeight="1"
+            android:text="@string/cycles_break"
+            android:textColor="?attr/theme_primaryTextColor"
+            android:textSize="?attr/font_medium" />
+
+        <by.bsuir.tabata_app.util.TimeInput
+            android:id="@+id/break_timeInput"
+            android:layout_columnWeight="1"
+            android:layout_gravity="end"
+            app:defaultValue="120" />
+
+    </GridLayout>
+
+    <TextView
+        android:id="@+id/exercises_label"
+        style="@style/TitleText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
+        android:text="@string/exercises_list"
+        android:textColor="?attr/theme_accentTextColor"
+        android:textSize="?attr/font_medium"
+        app:layout_constraintTop_toBottomOf="@id/params_gridLayout" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="16dp"
+        android:fadingEdge="vertical"
+        android:fadingEdgeLength="8dp"
+        android:overScrollMode="ifContentScrolls"
+        android:requiresFadingEdge="vertical"
+        app:layout_constraintBottom_toTopOf="@id/start_button"
+        app:layout_constraintTop_toBottomOf="@id/exercises_label">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/exercises_recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:isScrollContainer="false"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:itemCount="5"
+            tools:listitem="@layout/exercise_item" />
+
+    </androidx.core.widget.NestedScrollView>
+
+    <Button
+        android:id="@+id/start_button"
+        style="@style/ContentText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="32dp"
+        android:background="@drawable/rounded_button"
+        android:textAllCaps="false"
+        android:textColor="?attr/theme_secondaryColor"
+        android:textSize="?attr/font_medium"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="Start workout (15:32 total)" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

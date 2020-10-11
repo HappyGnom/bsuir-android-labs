@@ -1,3 +1,4 @@
+include ':tabata_app'
 include ':ui'
 include ':architecture'
 include ':converter_app'

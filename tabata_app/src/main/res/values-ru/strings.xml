@@ -1,0 +1,43 @@
+<resources>
+    <string name="app_name">Tabata</string>
+
+    <string name="title">Название</string>
+    <string name="work">Рабочее время</string>
+    <string name="rest">Время отдыха</string>
+    <string name="intervals">Число интервалов</string>
+    <string name="cycles">Число циклов</string>
+    <string name="cycles_break">Время перерывов</string>
+    <string name="exercises_list">Упражнения:</string>
+    <string name="exercise_name">Название упражнения</string>
+    <string name="start_workout_template">Начать тренировку (всего x)</string>
+    <string name="choose_color">Выберите цвет таймера</string>
+
+    <string name="title_empty">Название не может быть пустым</string>
+    <string name="exercise_empty">Не все названия упражнений заполнены</string>
+    <string name="timer_saved">Таймер сохранён</string>
+
+    <string name="delete_timer">Удалить таймер</string>
+    <string name="delete_timer_question_template">Вы уверены, что хотите удалить таймер \'x\'?</string>
+    <string name="yes">Да</string>
+    <string name="no">Нет</string>
+
+    <string name="prepare">Приготовьтесь</string>
+    <string name="cycle_num">Цикл:</string>
+    <string name="interval_num">Интервал:</string>
+    <string name="next_up_template">Далее: y</string>
+    <string name="stop_timer">Остановка таймера</string>
+    <string name="stop_timer_question">Вы уверены, что хотите остановить текущий таймер?</string>
+
+    <string name="good_job">Отличная\nработа!</string>
+    <string name="finish">Завершить</string>
+
+    <string name="settings">Настройки</string>
+    <string name="clear_data">Очистить данные</string>
+    <string name="clear_data_summary">Очистить все данные приложения</string>
+    <string name="clear_data_question">Вы уверены, что хотите очистить все данные?</string>
+    <string name="all_data_cleared">Все данные очищены</string>
+    <string name="night_theme">Включить ночную тему</string>
+    <string name="night_theme_summary">Использовать тёмную тему приложения</string>
+    <string name="app_language">Язык приложения</string>
+    <string name="font_size">Размер шрифта</string>
+</resources>

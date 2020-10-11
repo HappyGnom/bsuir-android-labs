@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/theme_backgroundColor"
+    tools:context=".presentation.timers_list.TimersListFragment">
+
+    <ImageView
+        android:id="@+id/blob"
+        android:layout_width="match_parent"
+        android:layout_height="550dp"
+        android:scaleType="fitXY"
+        android:scaleX="2"
+        android:src="?attr/theme_mainMenuCircle"
+        app:layout_constraintBottom_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/app_name_label"
+        style="@style/TitleText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/app_name"
+        android:textColor="@color/background"
+        android:textSize="?attr/font_large"
+        app:layout_constraintBottom_toBottomOf="@+id/blob"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.35" />
+
+    <ImageButton
+        android:id="@+id/settings_button"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:layout_marginTop="44dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/transparent_button"
+        android:padding="4dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/ic_settings"
+        android:tint="@color/background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/motivation_textView"
+        style="@style/TitleText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        android:textAlignment="center"
+        android:textColor="@color/background"
+        android:textSize="?attr/font_medium"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/app_name_label"
+        tools:text="&quot;I don’t count my situps. I only start counting once it starts hurting.&quot; - Muhammad Ali" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/timers_recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:nestedScrollingEnabled="false"
+        android:overScrollMode="never"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintTop_toBottomOf="@id/blob"
+        tools:itemCount="5"
+        tools:listitem="@layout/timer_item" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/add_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:backgroundTint="@color/support"
+        android:elevation="4dp"
+        android:src="@drawable/ic_add"
+        android:tint="@color/background"
+        app:borderWidth="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

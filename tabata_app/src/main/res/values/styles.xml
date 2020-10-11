@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="TabataAppTheme" parent="AppTheme">
+        <item name="preferenceTheme">@style/TabataPreferenceThemeOverlay</item>
+    </style>
+
+    <style name="TabataPreferenceThemeOverlay" parent="PreferenceThemeOverlay">
+        <item name="android:layout">@layout/settings_fragment_layout</item>
+        <item name="android:fontFamily">@font/noto_sans_jp_regular</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:textSize">?attr/font_medium</item>
+        <item name="android:textColor">?attr/theme_primaryTextColor</item>
+    </style>
+
+    <style name="TabataAppTheme.Launch">
+        <item name="android:windowBackground">@drawable/launch_screen</item>
+    </style>
+
+    <style name="TabataAppThemeLight" parent="TabataAppTheme">
+        <item name="theme_backgroundColor">@color/background</item>
+        <item name="theme_primaryColor">@color/brand1</item>
+        <item name="theme_secondaryColor">@color/brand2</item>
+
+        <item name="theme_accentTextColor">@color/accentText</item>
+        <item name="theme_primaryTextColor">@color/primaryText</item>
+        <item name="theme_secondaryTextColor">@color/secondaryText</item>
+        <item name="android:textColorSecondary">@color/secondaryText</item>
+
+        <item name="theme_mainMenuCircle">@drawable/circle</item>
+        <item name="theme_deleteIcon">@drawable/ic_delete</item>
+        <item name="theme_closeIcon">@drawable/ic_cross</item>
+    </style>
+
+    <style name="TabataAppThemeDark" parent="TabataAppTheme">
+        <item name="colorPrimary">@color/background_dark</item>
+        <item name="colorPrimaryDark">@color/background_dark</item>
+        <item name="colorAccent">@color/brand1_dark</item>
+
+        <item name="theme_backgroundColor">@color/background_dark</item>
+        <item name="theme_primaryColor">@color/brand1_dark</item>
+        <item name="theme_secondaryColor">@color/background</item>
+
+        <item name="theme_accentTextColor">@color/accentText_dark</item>
+        <item name="theme_primaryTextColor">@color/primaryText_dark</item>
+        <item name="theme_secondaryTextColor">@color/secondaryText_dark</item>
+        <item name="android:textColorSecondary">@color/secondaryText_dark</item>
+
+        <item name="theme_mainMenuCircle">@drawable/circle_dark</item>
+        <item name="theme_deleteIcon">@drawable/ic_delete_dark</item>
+        <item name="theme_closeIcon">@drawable/ic_cross_dark</item>
+
+        <item name="md_background_color">@color/background_dark</item>
+        <item name="md_color_button_text">@color/support</item>
+        <item name="md_color_title">@color/accentText_dark</item>
+        <item name="md_color_content">@color/primaryText_dark</item>
+    </style>
+
+    <style name="TabataAppThemeLight.FontSmall">
+        <item name="font_small">12dp</item>
+        <item name="font_medium">14dp</item>
+        <item name="font_large">20dp</item>
+        <item name="font_xlarge">28dp</item>
+    </style>
+
+    <style name="TabataAppThemeLight.FontNormal">
+        <item name="font_small">14dp</item>
+        <item name="font_medium">16dp</item>
+        <item name="font_large">28dp</item>
+        <item name="font_xlarge">32dp</item>
+    </style>
+
+    <style name="TabataAppThemeLight.FontBig">
+        <item name="font_small">16dp</item>
+        <item name="font_medium">20dp</item>
+        <item name="font_large">32dp</item>
+        <item name="font_xlarge">38dp</item>
+    </style>
+
+    <style name="TabataAppThemeDark.FontSmall">
+        <item name="font_small">12dp</item>
+        <item name="font_medium">14dp</item>
+        <item name="font_large">20dp</item>
+        <item name="font_xlarge">28dp</item>
+    </style>
+
+    <style name="TabataAppThemeDark.FontNormal">
+        <item name="font_small">14dp</item>
+        <item name="font_medium">16dp</item>
+        <item name="font_large">28dp</item>
+        <item name="font_xlarge">32dp</item>
+    </style>
+
+    <style name="TabataAppThemeDark.FontBig">
+        <item name="font_small">16dp</item>
+        <item name="font_medium">20dp</item>
+        <item name="font_large">32dp</item>
+        <item name="font_xlarge">38dp</item>
+    </style>
+
+</resources>

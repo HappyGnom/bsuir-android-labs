@@ -1,0 +1,43 @@
+<resources>
+    <string name="app_name">Tabata</string>
+
+    <string name="title">Title</string>
+    <string name="work">Work</string>
+    <string name="rest">Rest</string>
+    <string name="intervals">Intervals</string>
+    <string name="cycles">Cycles</string>
+    <string name="cycles_break">Break</string>
+    <string name="exercises_list">Exercises:</string>
+    <string name="exercise_name">Exercise name</string>
+    <string name="start_workout_template">Start workout (x total)</string>
+    <string name="choose_color">Choose timer color</string>
+
+    <string name="title_empty">Title is empty</string>
+    <string name="exercise_empty">Not all exercise names present</string>
+    <string name="timer_saved">Timer saved</string>
+
+    <string name="delete_timer">Delete timer</string>
+    <string name="delete_timer_question_template">Do you want to delete timer \'x\'?</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+
+    <string name="prepare">Prepare</string>
+    <string name="cycle_num">Cycle:</string>
+    <string name="interval_num">Interval:</string>
+    <string name="next_up_template">Next up: y</string>
+    <string name="stop_timer">Stop the timer</string>
+    <string name="stop_timer_question">Are you sure you want to stop the timer?</string>
+
+    <string name="good_job">You\'ve\ndone\ngreat!</string>
+    <string name="finish">Finish</string>
+
+    <string name="settings">Settings</string>
+    <string name="clear_data">Clear data</string>
+    <string name="clear_data_summary">Clear all stored app data</string>
+    <string name="clear_data_question">Do you want to clear all app data?</string>
+    <string name="all_data_cleared">All app data cleared</string>
+    <string name="night_theme">Enable night theme</string>
+    <string name="night_theme_summary">Use dark app theme</string>
+    <string name="app_language">App language</string>
+    <string name="font_size">Font size</string>
+</resources>

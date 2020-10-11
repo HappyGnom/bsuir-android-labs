@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    tools:background="?attr/theme_backgroundColor">
+
+    <Button
+        android:id="@+id/minus_button"
+        style="@style/TitleText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_button"
+        android:backgroundTint="?attr/theme_primaryColor"
+        android:minWidth="0dp"
+        android:minHeight="0dp"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        android:text="–"
+        android:textColor="@color/background"
+        android:textSize="?attr/font_medium"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/time_value_textView"
+        style="@style/ContentText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:minEms="2"
+        android:textAlignment="center"
+        android:textColor="?attr/theme_primaryTextColor"
+        android:textSize="?attr/font_medium"
+        tools:text="@tools:sample/date/hhmm" />
+
+    <Button
+        android:id="@+id/plus_button"
+        style="@style/TitleText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_button"
+        android:backgroundTint="?attr/theme_primaryColor"
+        android:minWidth="0dp"
+        android:minHeight="0dp"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        android:text="+"
+        android:textColor="@color/background"
+        android:textSize="?attr/font_medium"
+        tools:ignore="HardcodedText" />
+
+</LinearLayout>

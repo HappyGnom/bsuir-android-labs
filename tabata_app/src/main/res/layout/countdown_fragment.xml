@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/theme_backgroundColor"
+    tools:context=".presentation.countdown.CountdownFragment">
+
+    <ImageButton
+        android:id="@+id/back_button"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="44dp"
+        android:background="@drawable/transparent_button"
+        android:scaleType="fitXY"
+        android:src="@drawable/ic_cross_dark"
+        android:tint="?attr/theme_secondaryColor"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/timer_name_textView"
+        style="@style/TitleText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="?attr/theme_accentTextColor"
+        android:textSize="?attr/font_large"
+        app:layout_constraintBottom_toBottomOf="@id/back_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/back_button"
+        tools:text="Timer name" />
+
+    <GridLayout
+        android:id="@+id/stages_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:columnCount="3"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/timer_name_textView">
+
+        <TextView
+            style="@style/ContentText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:text="@string/cycle_num"
+            android:textColor="?attr/theme_secondaryTextColor"
+            android:textSize="?attr/font_medium" />
+
+        <Space android:layout_width="16dp" />
+
+        <TextView
+            android:id="@+id/cycle_number_textView"
+            style="@style/ContentText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:textColor="?attr/theme_secondaryTextColor"
+            android:textSize="?attr/font_medium"
+            tools:text="1/3" />
+
+        <TextView
+            android:id="@+id/interval_number_label"
+            style="@style/ContentText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:text="@string/interval_num"
+            android:textColor="?attr/theme_secondaryTextColor"
+            android:textSize="?attr/font_medium" />
+
+        <Space android:layout_width="16dp" />
+
+        <TextView
+            android:id="@+id/interval_number_textView"
+            style="@style/ContentText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:textColor="?attr/theme_secondaryTextColor"
+            android:textSize="?attr/font_medium"
+            tools:text="4/7" />
+
+    </GridLayout>
+
+    <TextView
+        android:id="@+id/countdown_textView"
+        style="@style/TitleText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="?attr/theme_primaryColor"
+        android:textSize="84dp"
+        app:layout_constraintBottom_toTopOf="@id/exercises_layout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/stages_layout"
+        app:layout_constraintVertical_bias="0.25"
+        tools:ignore="SpUsage"
+        tools:text="@tools:sample/date/hhmm" />
+
+    <LinearLayout
+        android:id="@+id/exercises_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="48dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@id/controls_layout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:id="@+id/current_stage_textView"
+            style="@style/TitleText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textColor="@color/support"
+            android:textSize="?attr/font_xlarge"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:text="Burpees with jump" />
+
+        <TextView
+            android:id="@+id/next_exercise_textView"
+            style="@style/ContentText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textAlignment="center"
+            android:textColor="?attr/theme_primaryTextColor"
+            android:textSize="?attr/font_medium"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:text="Next up: Pull ups" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/controls_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageButton
+            android:id="@+id/backward_button"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/transparent_button"
+            android:scaleType="fitXY"
+            android:scaleX="-1"
+            android:src="@drawable/ic_forward"
+            android:tint="?attr/theme_primaryColor"
+            tools:ignore="ContentDescription" />
+
+        <Space
+            android:layout_width="8dp"
+            android:layout_height="wrap_content" />
+
+        <ImageButton
+            android:id="@+id/play_stop_button"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@drawable/transparent_button"
+            android:padding="4dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_play"
+            android:tint="?attr/theme_primaryColor"
+            tools:ignore="ContentDescription" />
+
+        <Space
+            android:layout_width="8dp"
+            android:layout_height="wrap_content" />
+
+        <ImageButton
+            android:id="@+id/forward_button"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/transparent_button"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_forward"
+            android:tint="?attr/theme_primaryColor"
+            tools:ignore="ContentDescription" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
