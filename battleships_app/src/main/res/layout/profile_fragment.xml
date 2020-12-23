@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".presentation.profile.ProfileFragment">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:scaleType="fitXY"
+        android:src="@color/brand1"
+        app:layout_constraintBottom_toTopOf="@id/middle_guideLine"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription" />
+
+    <ImageButton
+        android:id="@+id/back_button"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="44dp"
+        android:background="@drawable/transparent_button"
+        android:scaleType="fitXY"
+        android:src="@drawable/ic_back"
+        android:tint="@color/background"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/avatar_imageView"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="?selectableItemBackgroundBorderless"
+        app:civ_border_color="@color/brand1"
+        app:civ_border_width="4dp"
+        app:layout_constraintBottom_toBottomOf="@id/middle_guideLine"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/middle_guideLine"
+        tools:ignore="UnusedAttribute"
+        tools:src="@drawable/octopus" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/middle_guideLine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.20" />
+
+    <LinearLayout
+        android:id="@+id/nickname_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/avatar_imageView">
+
+        <TextView
+            android:id="@+id/username_textView"
+            style="@style/TitleText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/brand2"
+            tools:ignore="SpUsage"
+            tools:text="Nickname" />
+
+        <ImageButton
+            android:id="@+id/edit_username_button"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="2dp"
+            android:background="@drawable/transparent_button"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_edit"
+            android:tint="@color/support"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="ContentDescription" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/stats_label"
+        style="@style/TitleText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="16dp"
+        android:text="@string/stats"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/nickname_layout" />
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:columnCount="2"
+        android:useDefaultMargins="true"
+        app:layout_constraintBottom_toTopOf="@id/sign_out_button"
+        app:layout_constraintTop_toBottomOf="@id/stats_label">
+
+        <TextView
+            style="@style/ContentText"
+            android:layout_columnWeight="1"
+            android:text="@string/total_fights" />
+
+        <TextView
+            android:id="@+id/total_fights_textView"
+            style="@style/ContentText"
+            android:layout_columnWeight="1"
+            android:textAlignment="textEnd"
+            android:textColor="@color/accentText"
+            android:textStyle="bold"
+            tools:text="10" />
+
+        <TextView
+            style="@style/ContentText"
+            android:layout_columnWeight="1"
+            android:text="@string/wins" />
+
+        <TextView
+            android:id="@+id/wins_textView"
+            style="@style/ContentText"
+            android:layout_columnWeight="1"
+            android:textAlignment="textEnd"
+            android:textColor="@color/accentText"
+            android:textStyle="bold"
+            tools:text="6" />
+
+        <TextView
+            style="@style/ContentText"
+            android:layout_columnWeight="1"
+            android:text="@string/looses" />
+
+        <TextView
+            android:id="@+id/looses_textView"
+            style="@style/ContentText"
+            android:layout_columnWeight="1"
+            android:textAlignment="textEnd"
+            android:textColor="@color/accentText"
+            android:textStyle="bold"
+            tools:text="4" />
+
+        <TextView
+            style="@style/ContentText"
+            android:layout_columnWeight="1"
+            android:text="@string/ships_destroyed" />
+
+        <TextView
+            android:id="@+id/ships_destroyed_textView"
+            style="@style/ContentText"
+            android:layout_columnWeight="1"
+            android:textAlignment="textEnd"
+            android:textColor="@color/accentText"
+            android:textStyle="bold"
+            tools:text="27" />
+
+    </GridLayout>
+
+    <Button
+        android:id="@+id/sign_out_button"
+        style="@style/ContentText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="32dp"
+        android:background="@drawable/rounded_button"
+        android:backgroundTint="@color/danger"
+        android:text="@string/leave_account"
+        android:textAllCaps="false"
+        android:textColor="@color/background"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

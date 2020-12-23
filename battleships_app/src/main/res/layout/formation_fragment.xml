@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".presentation.formation.FormationFragment">
+
+    <ImageButton
+        android:id="@+id/back_button"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="44dp"
+        android:background="@drawable/transparent_button"
+        android:scaleType="fitXY"
+        android:src="@drawable/ic_back"
+        android:tint="@color/brand2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription" />
+
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:rotation="-3"
+        android:scaleX="1.15"
+        android:scaleY="1"
+        android:src="@drawable/rounded_object"
+        app:layout_constraintBottom_toBottomOf="@id/create_game_label"
+        app:layout_constraintEnd_toEndOf="@id/create_game_label"
+        app:layout_constraintStart_toStartOf="@id/create_game_label"
+        app:layout_constraintTop_toTopOf="@id/create_game_label"
+        app:tint="@color/brand1"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/create_game_label"
+        style="@style/TitleText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/battle_formation"
+        android:textColor="@color/background"
+        android:textSize="32dp"
+        app:layout_constraintBottom_toBottomOf="@id/back_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/back_button"
+        tools:ignore="SpUsage" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/board_recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="64dp"
+        android:layout_marginEnd="32dp"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        app:layout_constraintTop_toBottomOf="@id/create_game_label"
+        app:spanCount="11"
+        tools:itemCount="121"
+        tools:listitem="@layout/cell_image_item" />
+
+    <GridLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:columnCount="3"
+        android:useDefaultMargins="true"
+        app:layout_constraintBottom_toTopOf="@id/buttons_layout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/board_recyclerView"
+        app:layout_constraintVertical_bias="0.4">
+
+        <Space android:layout_columnWeight="1" />
+
+        <ImageButton
+            android:id="@+id/up_button"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="0dp"
+            android:layout_marginEnd="0dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/transparent_button"
+            android:rotation="180"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_arrow_down_slim"
+            android:tint="@color/brand2"
+            tools:ignore="ContentDescription" />
+
+        <Space android:layout_columnWeight="1" />
+
+        <ImageButton
+            android:id="@+id/left_button"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/transparent_button"
+            android:rotation="90"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_arrow_down_slim"
+            android:tint="@color/brand2"
+            tools:ignore="ContentDescription" />
+
+        <ImageButton
+            android:id="@+id/rotate_button"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="0dp"
+            android:layout_marginEnd="0dp"
+            android:background="@drawable/transparent_button"
+            android:scaleType="fitXY"
+            android:padding="2dp"
+            android:src="@drawable/ic_rotate"
+            android:tint="@color/brand2"
+            tools:ignore="ContentDescription" />
+
+        <ImageButton
+            android:id="@+id/right_button"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="16dp"
+            android:background="@drawable/transparent_button"
+            android:rotation="270"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_arrow_down_slim"
+            android:tint="@color/brand2"
+            tools:ignore="ContentDescription" />
+
+        <Space android:layout_columnWeight="1" />
+
+        <ImageButton
+            android:id="@+id/down_button"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="0dp"
+            android:background="@drawable/transparent_button"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_arrow_down_slim"
+            android:tint="@color/brand2"
+            tools:ignore="ContentDescription" />
+
+        <Space android:layout_columnWeight="1" />
+
+    </GridLayout>
+
+    <LinearLayout
+        android:id="@+id/buttons_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="32dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <Button
+            android:id="@+id/reset_button"
+            style="@style/ContentText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:background="@drawable/rounded_button"
+            android:backgroundTint="@color/danger"
+            android:text="@string/reset"
+            android:textAllCaps="false"
+            android:textColor="@color/background"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+        <Space
+            android:layout_width="32dp"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/save_button"
+            style="@style/ContentText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:background="@drawable/rounded_button"
+            android:backgroundTint="@color/success"
+            android:text="@string/save"
+            android:textAllCaps="false"
+            android:textColor="@color/background"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

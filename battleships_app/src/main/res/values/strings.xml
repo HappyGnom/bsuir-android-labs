@@ -1,0 +1,88 @@
+<resources>
+    <string name="app_name">Battleships</string>
+
+    <string name="sign_in">Sign into account</string>
+    <string name="email">Email:</string>
+    <string name="your_account_post">Mail of your account</string>
+    <string name="password_account">Password:</string>
+    <string name="your_password">Your password</string>
+    <string name="enter_account">Enter account</string>
+
+    <string name="create_account">Create an account</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="username">Username:</string>
+    <string name="how_to_call_you">How to call you</string>
+    <string name="your_post">Your post address</string>
+    <string name="password_for_account">Password for your account</string>
+    <string name="register">Register</string>
+
+    <string name="failed_to_create_user">Failed to create user</string>
+    <string name="wrong_user_data">Wrong email or password</string>
+
+    <string name="fill_all_data">Fill all the data</string>
+    <string name="password_too_short">Password too short (min is 5)</string>
+    <string name="password_too_long">Password is too long (max is 16)</string>
+    <string name="wrong_email_format">Email format is wrong</string>
+    <string name="username_too_long">Username is too long (max is 20)</string>
+    <string name="username_too_short">Username is too short (min is 4)</string>
+    <string name="lobby_name_too_long">Lobby name is too long (max is 20)</string>
+    <string name="lobby_name_too_short">Lobby name is too short (min is 4)</string>
+    <string name="lobby_id_too_short">Lobby id is too short (min is 4)</string>
+
+    <string name="host_game">Host a game</string>
+    <string name="join_game">Join a game</string>
+    <string name="ships_formation">Ships formation</string>
+    <string name="player_account">Player account</string>
+
+    <string name="change_nick">Change your nickname</string>
+    <string name="stats">Stats:</string>
+    <string name="total_fights">Total fights</string>
+    <string name="wins">Wins</string>
+    <string name="looses">Looses</string>
+    <string name="ships_destroyed">Ships destroyed</string>
+    <string name="leave_account">Leave account</string>
+
+    <string name="create_game">Create a game</string>
+    <string name="start_game">Let\'s battle!</string>
+    <string name="lobby_name">Lobby name:</string>
+    <string name="host_lobby_name">Your lobby name</string>
+    <string name="lobby_password">Lobby password:</string>
+    <string name="host_lobby_password">Your lobby password</string>
+    <string name="lobby_id">Lobby id:</string>
+    <string name="join_lobby_id">Your lobby id</string>
+    <string name="failed_to_create_lobby">Failed to create a lobby</string>
+
+    <string name="battle_formation">Formation</string>
+    <string name="reset">Reset</string>
+    <string name="save">Save</string>
+    <string name="dismiss">Dismiss</string>
+    <string name="resolve_conflicts">Resolve ship conflicts first</string>
+    <string name="formation_save_fail">Ship formation save failed</string>
+    <string name="formation_save_success">Ship formation saved!</string>
+    <string name="formation_load_fail">Ship formation loading failed</string>
+    <string name="formation_load_success">Ship formation loaded!</string>
+
+    <string name="awaiting">Awaiting</string>
+    <string name="await_player_instruction">Please, share the lobby id\nand wait for the other player\nto connect</string>
+    <string name="id">Id:</string>
+    <string name="id_copied">Id copied to clipboard</string>
+    <string name="battleship_id">Id for Battleships game lobby</string>
+    <string name="share_id_using">Share lobby id via:</string>
+    <string name="lobby_join_fail">Failed to join a lobby</string>
+    <string name="lobby_join_success">Joining lobby…</string>
+    <string name="wrong_lobby_id">Wrong lobby id</string>
+    <string name="wrong_lobby_password">Wrong lobby password</string>
+
+    <string name="battle">Battle!</string>
+    <string name="your_turn">Your turn</string>
+    <string name="enemies_turn">Enemies turn</string>
+    <string name="turn_number_template">Turn x</string>
+    <string name="ships">Ships:</string>
+    <string name="ship_template">Length x - y left</string>
+
+    <string name="battle_results">Battle results</string>
+    <string name="finish">Finish</string>
+    <string name="you_won">You won!</string>
+    <string name="you_lost">You lost!</string>
+
+</resources>

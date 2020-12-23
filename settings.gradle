@@ -1,3 +1,4 @@
+include ':battleships_app'
 include ':tabata_app'
 include ':ui'
 include ':architecture'

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/menuFragment">
+
+    <fragment
+        android:id="@+id/menuFragment"
+        android:name="by.bsuir.battleships_app.presentation.menu.MenuFragment"
+        android:label="menu_fragment"
+        tools:layout="@layout/menu_fragment" >
+        <action
+            android:id="@+id/action_menuFragment_to_hostGameFragment"
+            app:destination="@id/hostGameFragment" />
+        <action
+            android:id="@+id/action_menuFragment_to_joinGameFragment"
+            app:destination="@id/joinGameFragment" />
+        <action
+            android:id="@+id/action_menuFragment_to_formationFragment"
+            app:destination="@id/formationFragment" />
+        <action
+            android:id="@+id/action_menuFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/joinGameFragment"
+        android:name="by.bsuir.battleships_app.presentation.join_game.JoinGameFragment"
+        android:label="join_game_fragment"
+        tools:layout="@layout/join_game_fragment" >
+        <action
+            android:id="@+id/action_joinGameFragment_to_battleFragment"
+            app:destination="@id/battleFragment"
+            app:popUpTo="@id/menuFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/hostGameFragment"
+        android:name="by.bsuir.battleships_app.presentation.host_game.HostGameFragment"
+        android:label="host_game_fragment"
+        tools:layout="@layout/host_game_fragment" >
+        <action
+            android:id="@+id/action_hostGameFragment_to_awaitPlayersFragment"
+            app:destination="@id/awaitPlayersFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/formationFragment"
+        android:name="by.bsuir.battleships_app.presentation.formation.FormationFragment"
+        android:label="formation_fragment"
+        tools:layout="@layout/formation_fragment" />
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="by.bsuir.battleships_app.presentation.profile.ProfileFragment"
+        android:label="profile_fragment"
+        tools:layout="@layout/profile_fragment" >
+        <action
+            android:id="@+id/action_profileFragment_to_authenticationActivity"
+            app:destination="@id/authenticationActivity" />
+    </fragment>
+    <activity
+        android:id="@+id/authenticationActivity"
+        android:name="by.bsuir.battleships_app.AuthenticationActivity"
+        android:label="activity_authentication"
+        tools:layout="@layout/activity_authentication" />
+    <fragment
+        android:id="@+id/awaitPlayersFragment"
+        android:name="by.bsuir.battleships_app.presentation.await_players.AwaitPlayersFragment"
+        android:label="await_players_fragment"
+        tools:layout="@layout/await_players_fragment" >
+        <action
+            android:id="@+id/action_awaitPlayersFragment_to_battleFragment"
+            app:destination="@id/battleFragment"
+            app:popUpTo="@id/menuFragment" />
+        <argument
+            android:name="lobbyId"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/battleFragment"
+        android:name="by.bsuir.battleships_app.presentation.battle.BattleFragment"
+        android:label="battle_fragment"
+        tools:layout="@layout/battle_fragment" >
+        <action
+            android:id="@+id/action_battleFragment_to_resultsFragment"
+            app:destination="@id/resultsFragment"
+            app:popUpTo="@id/menuFragment" />
+        <argument
+            android:name="lobbyId"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/resultsFragment"
+        android:name="by.bsuir.battleships_app.presentation.results.ResultsFragment"
+        android:label="results_fragment"
+        tools:layout="@layout/results_fragment" >
+        <argument
+            android:name="winnerId"
+            app:argType="string" />
+        <argument
+            android:name="firstPlayerData"
+            app:argType="by.bsuir.battleships_app.data.UserData" />
+        <argument
+            android:name="secondPlayerData"
+            app:argType="by.bsuir.battleships_app.data.UserData" />
+    </fragment>
+</navigation>
