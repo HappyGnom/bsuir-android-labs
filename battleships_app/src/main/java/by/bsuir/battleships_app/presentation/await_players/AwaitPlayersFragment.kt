@@ -29,7 +29,7 @@ class AwaitPlayersFragment : Fragment() {
     ): View? {
         val view = inflater.inflate(R.layout.await_players_fragment, container, false)
 
-        view.cancel_button.setOnClickListener {
+        view.back_button.setOnClickListener {
             //TODO Cancel game
             findNavController().popBackStack()
         }

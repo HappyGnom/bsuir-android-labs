@@ -7,14 +7,14 @@
     tools:context=".presentation.await_players.AwaitPlayersFragment">
 
     <ImageButton
-        android:id="@+id/cancel_button"
+        android:id="@+id/back_button"
         android:layout_width="28dp"
         android:layout_height="28dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="44dp"
         android:background="@drawable/transparent_button"
         android:scaleType="fitXY"
-        android:src="@drawable/ic_cross"
+        android:src="@drawable/ic_back"
         android:tint="@color/brand2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -42,10 +42,10 @@
         android:text="@string/awaiting"
         android:textColor="@color/background"
         android:textSize="32dp"
-        app:layout_constraintBottom_toBottomOf="@id/cancel_button"
+        app:layout_constraintBottom_toBottomOf="@id/back_button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@id/cancel_button"
+        app:layout_constraintTop_toTopOf="@id/back_button"
         tools:ignore="SpUsage" />
 
     <com.wang.avi.AVLoadingIndicatorView

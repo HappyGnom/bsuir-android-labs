@@ -15,6 +15,7 @@
         android:background="@drawable/transparent_button"
         android:scaleType="fitXY"
         android:src="@drawable/ic_cross"
+        android:visibility="invisible"
         android:tint="@color/brand2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
