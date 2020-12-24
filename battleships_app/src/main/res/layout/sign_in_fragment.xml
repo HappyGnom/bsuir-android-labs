@@ -99,7 +99,7 @@
         android:layout_height="100dp"
         android:background="@drawable/circle"
         android:backgroundTint="@color/brand1"
-        android:paddingBottom="30dp"
+        android:paddingBottom="34dp"
         android:rotation="90"
         android:text="@string/sign_up"
         android:textColor="@color/background"
