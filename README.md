@@ -16,7 +16,7 @@ push it to your limits and then celebrate!
 ---
 
 ### Lab 3 - Battleshisp
-**Video-demo soon!**<br/>
+[Video demo](https://youtu.be/_-qFodrjJSA)<br/>
 Compete with your friends at playing battleships! 
 Create your formation and dive into exciting fights with your friends!<br/>
 :warning: Watch out not to get wet! :warning:
